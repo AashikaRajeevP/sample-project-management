@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-/* ===== NAVBAR ===== */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -41,7 +41,7 @@ a {
   border-bottom: 2px solid #ff6f61;
 }
 
-/* ===== HERO SECTION ===== */
+
 .hero-container {
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ a {
   text-align: center;
 }
 
-/* ===== IMAGE ===== */
+
 .hero-image {
   position: relative;
   width: 260px;
@@ -71,7 +71,7 @@ a {
   border-radius: 50%;
 }
 
-/* Decorative circles */
+
 .hero-image::before,
 .hero-image::after {
   content: "";
@@ -96,7 +96,7 @@ a {
   right: -15px;
 }
 
-/* ===== TEXT ===== */
+
 .hero-text {
   max-width: 600px;
   padding: 20px;
@@ -127,7 +127,7 @@ a {
   margin-top: 8px;
 }
 
-/* ===== OTHER SECTIONS ===== */
+
 .content-section {
   padding: 80px 10%;
   text-align: center;
@@ -152,7 +152,7 @@ a {
   line-height: 1.8;
 }
 
-/* ===== SKILLS ===== */
+
 .skill-container {
   display: flex;
   justify-content: center;
@@ -173,7 +173,7 @@ a {
   transform: scale(1.1);
 }
 
-/* ===== INTERESTS ===== */
+
 #interests ul {
   list-style: none;
   padding: 0;
@@ -186,7 +186,6 @@ a {
   margin-bottom: 10px;
 }
 
-/* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 30px 0;
