@@ -1,58 +1,195 @@
 
-<!DOCTYPEhtml>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0b0f;
+  color: #fff;
+  scroll-behavior: smooth;
+}
 
-<html>
-<head>
-    <title>MY PORTFOLIO</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Hello,</h1>
-        <h2>I'm Aashika !</h2>
-        <h3>Web Developer | Passionate learner | </h3>
-    <nav>
-      <a href ="#about">About Me</a>
-      <a href ="#skills">Skills</a>
-      <a href ="#contact">Contact Me</a>
+h1, h2, h3, p {
+  margin: 0;
+}
 
-    </nav>
-    </header>
-    <section id="about">
-        <h1>About Me</h1>
-        <p>I am a web developer with a passion for creating beautiful and functional websites. I love learning new technologies and improving my skills.</p>
-    </section>
-    <section id="skills">
-        <h2>Technical Skills</h2>
-      <div class="skill container"> 
-        <div class ="skill-item"> 
-      <img src="C:\Users\user\OneDrive\Desktop\html\html.png" alt="HTML">
-      </div>
-      <div class ="skill-item"> 
-      <img src="C:\Users\user\OneDrive\Desktop\html\css.png" alt="CSS">
-      </div>
-      <div class ="skill-item"> 
-      <img src="C:\Users\user\OneDrive\Desktop\html\js.png" alt="JavaScript">
-      </div>
-      </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email:  <a href="aashikarajeev10@gmail.com"></a>
-        </p>
-    </section>
-    <section>
-      <section id="interests">
-        <h2>Interests</h2>
-        <ul>
-          <li>Editing</li>
-          <li>Travelling</li>
-          <li>Outdoor games</li>
-        </ul>
-    </section>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    <footer>
-        <p>&copy; 2024 Aashika. All rights reserved.</p>
-    </footer>
-</body> 
-</html>
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #0e0e14;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  font-size: 1rem;
+}
+
+.navbar a:hover {
+  color: #ff6f61;
+  border-bottom: 2px solid #ff6f61;
+}
+
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 80px 10%;
+  background-color: #0b0b0f;
+  text-align: center;
+}
+
+
+.hero-image {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 90, 50, 0.4);
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 90%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 50%;
+}
+
+
+.hero-image::before,
+.hero-image::after {
+  content: "";
+  position: absolute;
+  border-radius: 90%;
+  z-index: 0;
+}
+
+.hero-image::before {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 110, 60, 0.15);
+  top: -25px;
+  left: -25px;
+}
+
+.hero-image::after {
+  width: 70px;
+  height: 70px;
+  background: #ff6f61;
+  bottom: -10px;
+  right: -15px;
+}
+
+
+.hero-text {
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+}
+
+.hero-text .line1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6vw, 5rem);
+  color: #ff6f61;
+}
+
+.hero-text .line2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-text .line2 span {
+  color: #ff6f61;
+}
+
+.hero-text .line3 {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.2rem;
+  color: #ff9561;
+  margin-top: 8px;
+}
+
+
+.content-section {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #111118;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.content-section:nth-child(even) {
+  background-color: #0e0e14;
+}
+
+.content-section h2 {
+  color: #ff6f61;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.content-section p {
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.skill-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-item img:hover {
+  transform: scale(1.1);
+}
+
+#interests ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#interests li {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #0b0b0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  font-size: 0.9rem;
+}
